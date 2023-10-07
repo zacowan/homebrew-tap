@@ -5,20 +5,20 @@
 class Totle < Formula
   desc "totle is a simple tool to allow developers to jot down their thoughts for safe-keeping in a transferrable format."
   homepage "https://github.com/zacowan/totle"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Darwin_arm64.tar.gz"
-      sha256 "3f8c12fdef8d006f56a3650a565fd08634cbbb4172ab855a4080be3db88387be"
+    if Hardware::CPU.intel?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.8/totle_Darwin_x86_64.tar.gz"
+      sha256 "94a80301202e64a65c7d98c969a823d275457437aac2e2c9de3bd12e52d423af"
 
       def install
         bin.install "totle"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Darwin_x86_64.tar.gz"
-      sha256 "51b4ab874fe71b36b21233a9777e9860dc300eba9d152d89aec5f4efbd33f634"
+    if Hardware::CPU.arm?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.8/totle_Darwin_arm64.tar.gz"
+      sha256 "f84f7386e3edf225fd880f11bcb14cfb61852ed7778522b3c76f581425ce1043"
 
       def install
         bin.install "totle"
@@ -27,17 +27,17 @@ class Totle < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Linux_x86_64.tar.gz"
-      sha256 "afc92bb57ef71b4bcb2a0db817ed270b9b4b6c6e8b39ec5812454a083fe9b65a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.8/totle_Linux_arm64.tar.gz"
+      sha256 "750ba9806fd28397e6adcb8b438664a87732135cce334bc17a8b4887a6b6361a"
 
       def install
         bin.install "totle"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Linux_arm64.tar.gz"
-      sha256 "ecec732121057d9b2dca4786874b312ce17f35079e1a674f1cce9573541b9087"
+    if Hardware::CPU.intel?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.8/totle_Linux_x86_64.tar.gz"
+      sha256 "2cde770dce4c83f8e994460405d250c2b13cfb57466181143670b983d1a7270e"
 
       def install
         bin.install "totle"
