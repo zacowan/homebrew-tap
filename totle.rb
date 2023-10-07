@@ -5,20 +5,20 @@
 class Totle < Formula
   desc "totle is a simple tool to allow developers to jot down their thoughts for safe-keeping in a transferrable format."
   homepage "https://github.com/zacowan/totle"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.6/totle_Darwin_x86_64.tar.gz"
-      sha256 "e87fba4340f14d6262d56ea6834ecba8e86ad158543980352e54160bcae6cba3"
+    if Hardware::CPU.arm?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Darwin_arm64.tar.gz"
+      sha256 "3f8c12fdef8d006f56a3650a565fd08634cbbb4172ab855a4080be3db88387be"
 
       def install
         bin.install "totle"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.6/totle_Darwin_arm64.tar.gz"
-      sha256 "e157bcf45b47e9b8bd83dc3a4ab28d0278e32b76f70d2fb14e560e79abac17a9"
+    if Hardware::CPU.intel?
+      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Darwin_x86_64.tar.gz"
+      sha256 "51b4ab874fe71b36b21233a9777e9860dc300eba9d152d89aec5f4efbd33f634"
 
       def install
         bin.install "totle"
@@ -28,16 +28,16 @@ class Totle < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.6/totle_Linux_x86_64.tar.gz"
-      sha256 "815490b7f3eb09121c2021f9c6bb4ccd6d9aed193659dfd1a9ac0c4a5843f5d9"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Linux_x86_64.tar.gz"
+      sha256 "afc92bb57ef71b4bcb2a0db817ed270b9b4b6c6e8b39ec5812454a083fe9b65a"
 
       def install
         bin.install "totle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.6/totle_Linux_arm64.tar.gz"
-      sha256 "82b920c8529909d62f44c007076b0f15c4a0b044e174990b12f1ff5456b1527a"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.7/totle_Linux_arm64.tar.gz"
+      sha256 "ecec732121057d9b2dca4786874b312ce17f35079e1a674f1cce9573541b9087"
 
       def install
         bin.install "totle"
