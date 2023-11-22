@@ -5,20 +5,20 @@
 class Totle < Formula
   desc "totle is a simple tool to allow developers to jot down their thoughts for safe-keeping in a transferrable format."
   homepage "https://github.com/zacowan/totle"
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.11/totle_Darwin_arm64.tar.gz"
-      sha256 "843dc6ed809cf7bb63aad9858ccae43fbd1e01b722ffae4802a3aa4968fd566a"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Darwin_arm64.tar.gz"
+      sha256 "09c1f21d3c6d773e6b0a0d119e89740995f9b2deeeea4261bc6a0ecfe98cd98c"
 
       def install
         bin.install "totle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.11/totle_Darwin_x86_64.tar.gz"
-      sha256 "8acfb59a652549a08d1f76e03a1ad27dcbd279af79d2a49dfff0b443a168847f"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Darwin_x86_64.tar.gz"
+      sha256 "ef64a3c1bfd32a5d0466c1b1495e382d156331c2549fa84f9e0b0ab9dc5ed3c1"
 
       def install
         bin.install "totle"
@@ -28,16 +28,16 @@ class Totle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.11/totle_Linux_arm64.tar.gz"
-      sha256 "dc9c67c3fa77c5c5b068e158a25aabb62d18c395a8d9774e454cde32de5cf68a"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Linux_arm64.tar.gz"
+      sha256 "a232cc278db133bb5bb91ad6df275bd12f36091c3d4785ad1d76ef1b5fe15b1b"
 
       def install
         bin.install "totle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.11/totle_Linux_x86_64.tar.gz"
-      sha256 "dd064c06317c5f4ecab3a173630947b26234134b0209445235f8a018979485b3"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Linux_x86_64.tar.gz"
+      sha256 "f7c1359ab85346f2d09f8d49c41a0df5857717ac3304599f441007192ef9e544"
 
       def install
         bin.install "totle"
