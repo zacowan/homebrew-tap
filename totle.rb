@@ -5,20 +5,20 @@
 class Totle < Formula
   desc "totle is a simple tool to allow developers to jot down their thoughts for safe-keeping in a transferrable format."
   homepage "https://github.com/zacowan/totle"
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Darwin_arm64.tar.gz"
-      sha256 "09c1f21d3c6d773e6b0a0d119e89740995f9b2deeeea4261bc6a0ecfe98cd98c"
+    on_intel do
+      url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Darwin_x86_64.tar.gz"
+      sha256 "188ecae53aa8d287675a526d8776795d013045c13620d177a64c41919e0128dd"
 
       def install
         bin.install "totle"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Darwin_x86_64.tar.gz"
-      sha256 "ef64a3c1bfd32a5d0466c1b1495e382d156331c2549fa84f9e0b0ab9dc5ed3c1"
+    on_arm do
+      url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Darwin_arm64.tar.gz"
+      sha256 "e68e4bff595e7405d294f13d353b28cf8dcf866f57ec95de86278b71d336892d"
 
       def install
         bin.install "totle"
@@ -27,20 +27,24 @@ class Totle < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Linux_arm64.tar.gz"
-      sha256 "a232cc278db133bb5bb91ad6df275bd12f36091c3d4785ad1d76ef1b5fe15b1b"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Linux_x86_64.tar.gz"
+        sha256 "48ff091019fbedf9f8e029eebc1d29a72d34d9bfffc51b420227e2b36024352b"
 
-      def install
-        bin.install "totle"
+        def install
+          bin.install "totle"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Linux_x86_64.tar.gz"
-      sha256 "f7c1359ab85346f2d09f8d49c41a0df5857717ac3304599f441007192ef9e544"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Linux_arm64.tar.gz"
+        sha256 "699bf19f8fa0cb8dfb8ce65a2dd865a7859605137bcd4d2788c66bde8faf9c6c"
 
-      def install
-        bin.install "totle"
+        def install
+          bin.install "totle"
+        end
       end
     end
   end
