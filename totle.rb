@@ -5,20 +5,20 @@
 class Totle < Formula
   desc "totle is a simple tool to allow developers to jot down their thoughts for safe-keeping in a transferrable format."
   homepage "https://github.com/zacowan/totle"
-  version "0.0.13"
+  version "0.0.14"
 
   on_macos do
     on_intel do
-      url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Darwin_x86_64.tar.gz"
-      sha256 "188ecae53aa8d287675a526d8776795d013045c13620d177a64c41919e0128dd"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Darwin_x86_64.tar.gz"
+      sha256 "74ae8005f8b6e52f73844ff3dd34a661c69cf0cd73824520ccd853cedbfe34d6"
 
       def install
         bin.install "totle"
       end
     end
     on_arm do
-      url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Darwin_arm64.tar.gz"
-      sha256 "e68e4bff595e7405d294f13d353b28cf8dcf866f57ec95de86278b71d336892d"
+      url "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Darwin_arm64.tar.gz"
+      sha256 "7684309e8e86f670f73d0ccdbf94e3dbf45cfc9bc0447b26d2ae8638813135d8"
 
       def install
         bin.install "totle"
@@ -29,8 +29,8 @@ class Totle < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Linux_x86_64.tar.gz"
-        sha256 "48ff091019fbedf9f8e029eebc1d29a72d34d9bfffc51b420227e2b36024352b"
+        url "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Linux_x86_64.tar.gz"
+        sha256 "ecc8468f6a56deb1b5a6cfadfd908656ade96aacc8e796701db4cbe2b7842588"
 
         def install
           bin.install "totle"
@@ -39,8 +39,8 @@ class Totle < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/zacowan/totle/releases/download/v0.0.13/totle_Linux_arm64.tar.gz"
-        sha256 "699bf19f8fa0cb8dfb8ce65a2dd865a7859605137bcd4d2788c66bde8faf9c6c"
+        url "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Linux_arm64.tar.gz"
+        sha256 "526a9888f57451315341e4544c855cc5a3691f8ad4726ed4589939925ebf7cdb"
 
         def install
           bin.install "totle"
